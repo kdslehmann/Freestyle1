@@ -154,7 +154,12 @@ Some journals save space by publishing the methods in the supplementary material
 It sounds like you have found an empirical paper on $disease!!
 
 
-&lt;button onclick=&quot;fetch(&#39;https://script.google.com/macros/s/AKfycbyQac9iVc-M2R8IHjEByqyqpbQ93S-ghnHvAfIziDDdrOvRVcMDDh2uQatv_j8ZDLbm/exec&#39;, {method: &#39;POST&#39;, headers: {&#39;Content-Type&#39;: &#39;text/plain;charset=utf-8&#39;}, body: JSON.stringify({name: &#39;$playerName&#39;, disease: &#39;$disease&#39;})})&quot;&gt;Submit&lt;/button&gt;
+&lt;button onclick=&quot;fetch(&#39;https://script.google.com/macros/s/AKfycbyQac9iVc-M2R8IHjEByqyqpbQ93S-ghnHvAfIziDDdrOvRVcMDDh2uQatv_j8ZDLbm/exec&#39;, {
+method: &#39;POST&#39;, 
+headers: {&#39;Content-Type&#39;: &#39;text/plain;charset=utf-8&#39;}, 
+body: JSON.stringify({
+name: &#39;(print: $playerName)&#39;, 
+disease: &#39;(print: $disease)&#39;})})&quot;&gt;Submit&lt;/button&gt;
 
 
 
