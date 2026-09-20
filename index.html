@@ -9,11 +9,11 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Test Your Paper.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Test Your Paper" startnode="16" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="BB99D6AB-7974-4BA5-B011-9F63D02E92CD" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link { color: #acfae7; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="START" tags="" position="600,900" size="100,100">&#39;&#39;So you think you found an empirical paper for your Freestyle Assignment?&#39;&#39;
+<tw-storydata name="Test Your Paper" startnode="16" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="BB99D6AB-7974-4BA5-B011-9F63D02E92CD" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link { color: #acfae7; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="check it" tags="" position="525,875" size="100,100">&#39;&#39;So you think you found an empirical paper for your Freestyle Assignment?&#39;&#39;
 
 These pages will take you through a number of questions to determine if this paper is indeed an empirical (original research) paper published in a scientific journal. 
 
-[[Ok, I&#39;m excited! Let&#39;s get started!]]</tw-passagedata><tw-passagedata pid="2" name="Ok, I&#39;m excited! Let&#39;s get started!" tags="" position="375,1075" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this article in a scientific journal? 
+[[Ok, I&#39;m excited! Let&#39;s get started!]]</tw-passagedata><tw-passagedata pid="2" name="Ok, I&#39;m excited! Let&#39;s get started!" tags="" position="450,1000" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this article in a scientific journal? 
 
 =|
 [[Yes]] 
@@ -21,25 +21,30 @@ These pages will take you through a number of questions to determine if this pap
 [[No]] 
 |==|
 
-[[I&#39;m not sure]]]</tw-passagedata><tw-passagedata pid="3" name="Yes" tags="" position="575,1250" size="100,100">Excellent!!
+[[I&#39;m not sure]]]</tw-passagedata><tw-passagedata pid="3" name="Yes" tags="" position="625,1275" size="100,100">Excellent!!
 
 Sounds like you found an article that has citation information that includes a DOI number, Journal, and Volume number.
 
+Copy and paste the DOI number here:
+(input-box: bind $doi)
+
 Read the title of the scientific paper. 
 
-Does it have the word [[review]] or [[meta-analysis]] in it?
+Does it have the word review or meta-analysis in it?
 
-[[No-&gt;top check]]</tw-passagedata><tw-passagedata pid="4" name="No" tags="" position="725,1250" size="100,100">Alright, good to know! An article from a newspaper, website, or media company is not appropriate for this assignment. Select your next most promising source and [[START AGAIN]]</tw-passagedata><tw-passagedata pid="5" name="I&#39;m not sure" tags="" position="425,1250" size="100,100">It’s not always easy to tell if an article has been peer reviewed for an scientific journal. 
+[[Yes, the has the word review in it-&gt;review]]
 
-The following characteristics can help you determine if the article you’re looking at is scholarly:
-* &#39;&#39;Author(s) name included: &#39;&#39;Scholarly articles are written by experts or researchers, so make sure that the author’s name, along with their institution and scholarly credentials, are included.
-* &#39;&#39;Technical or specialized language:&#39;&#39; Scholarly articles will often use technical or highly specialized language.
-* &#39;&#39;Written for professionals: &#39;&#39;Scholarly articles are published in academic journals. Academic journals have titles that suggest they are written for professionals in a particular field of study and not for the general public.
-* &#39;&#39;Charts, graphs, and diagrams: &#39;&#39;Scholarly articles communicate research results. They will often include charts, graphs, or diagrams.
-* &#39;&#39;Long (5 or more pages): &#39;&#39;Scholarly articles tend to be long. They are usually five or more pages.
-* &#39;&#39;Bibliography included: &#39;&#39;Scholarly articles will always include references to the sources cited or a bibliography.
+[[Yeah, the title contains the word &quot;meta-analysis.&quot;-&gt;meta-analysis]]
 
-Given this info, what do you think? Do you have a paper published in a scholarly scientific journal? 
+[[No-&gt;top check]]</tw-passagedata><tw-passagedata pid="4" name="No" tags="" position="700,1100" size="100,100">Alright, good to know! 
+
+An article from a newspaper, website, or media company is not appropriate for this assignment. Government reports and grant applications may be hosted on PubMed. If your pick is missing a DOI number or the typical journal citation info, it&#39;s probably not peer-reviewed. 
+
+Select your next most promising source and [[START AGAIN]].</tw-passagedata><tw-passagedata pid="5" name="I&#39;m not sure" tags="" position="400,1150" size="100,100">It’s not always easy to tell if an article has been peer reviewed for an scientific journal. Being on PubMed is a good start, but not a guarantee that you have a scientific paper.
+
+Click on the title of the paper and look for tell-tale signs like a DOI number, Journal name, volume and issue numbers near the top of the page.
+
+Do you see those?
 
 
 =|
@@ -48,11 +53,8 @@ Given this info, what do you think? Do you have a paper published in a scholarly
 [[No]] 
 |==|
 
-Ripped and adapted from: UofWisconsin-Madison
 
-https://learn.library.wisc.edu/identifying-scholarly-articles/
-
-</tw-passagedata><tw-passagedata pid="6" name="review" tags="" position="775,1450" size="100,100">Sorry! Your article is almost certainly a review paper. 
+</tw-passagedata><tw-passagedata pid="6" name="review" tags="" position="800,1375" size="100,100">Sorry! Your article is almost certainly a review paper. 
 
 Review papers are a summary and synthesis of the existing literature on a topic. 
 * They cite many papers, but do not describe new research. 
@@ -61,9 +63,9 @@ Review papers are a summary and synthesis of the existing literature on a topic.
 
 They also cite a good number of empirical, original research papers, so you may use this review paper to find your article for the Freestyle.
 
-No thanks, I already have a backup article. I&#39;d like to [[START AGAIN]].
+This is great news, I&#39;m having trouble finding empirical articles with PubMed. Please tell me how to use this review article to [[find an appropriate empirical article.]]
 
-This is great news, I&#39;m having trouble finding empirical articles. Please tell me [[how to use this article to find an appropriate empirical article.]]</tw-passagedata><tw-passagedata pid="7" name="meta-analysis" tags="" position="950,1450" size="100,100">Sorry! Your article is almost certainly a meta-analysis, which is not appropriate for this Freestyle. 
+No thanks, I already have a backup article. I&#39;d like to [[START AGAIN]].</tw-passagedata><tw-passagedata pid="7" name="meta-analysis" tags="" position="1050,1400" size="100,100">Sorry! Your article is almost certainly a meta-analysis, which is not appropriate for this Freestyle. 
 
 Meta-analyses are in a grey area between empirical and review papers.
 
@@ -92,17 +94,29 @@ anything in between!]
 
 They also cite a good number of empircal, original research papers, so you may use this review paper to find your article for the Freestyle.
 
-No thanks, I already have a backup article. I&#39;d like to [[START AGAIN]].
+This is great news, I&#39;m having trouble finding empirical articles with PubMed. Please tell me how to use this review article to [[find an appropriate empirical article.]]
 
-This is great news, I&#39;m having trouble finding empirical articles. Please tell me [[how to use this article to find an appropriate empirical article.]]</tw-passagedata><tw-passagedata pid="8" name="top check" tags="" position="500,1450" size="100,100">Great start!
+No thanks, I already have a backup article. I&#39;d like to [[START AGAIN]].</tw-passagedata><tw-passagedata pid="8" name="top check" tags="" position="475,1425" size="100,100">Great start!
 
-Some journals make your life easier by putting the type of article near the top. It is likely to be in very small font. 
+PubMed makes your life easier by putting the type of article near the top. 
 
-Do you see [[review]] or [[meta-analysis]] anywhere?
+Check here:
+&lt;style&gt; img {
+     max-width:100%;
+     max-height:100%;
+}
+&lt;/style&gt;
+&lt;img src=&quot;images/PubMedReview.png&quot;&gt;
+&lt;/div&gt;
 
-[[No, I don&#39;t think so-&gt;abstract]]</tw-passagedata><tw-passagedata pid="9" name="how to use this article to find an appropriate empirical article." tags="" position="900,1675" size="100,100">The paper you have is not an empirical paper but it definitely cites a ton of empirical papers. Here are a couple ways to use this paper to find an empirical paper you are interested in.
 
+Do you see review or meta-analysis there?
 
+[[Yeah, I see &quot;review.&quot;-&gt;review]]
+[[Uh oh, I see &quot;meta-analysis.&quot;-&gt;meta-analysis]]
+[[Nope!-&gt;abstract]]</tw-passagedata><tw-passagedata pid="9" name="find an appropriate empirical article." tags="" position="950,1600" size="100,100">The paper you have is not an empirical paper but it definitely cites a ton of empirical papers. Here are a couple ways to use this paper to find an empirical paper you are interested in.
+
+Options:
 0. Find a section that sounds interesting to you and read it until you find a sentence that describes a study. The in-text citation at the end of that sentence will point you to a full citation in the References section. Use that full citation to find the paper.
 0. Look for a table that summarizes the papers used by your current source. Use the citations there to find the paper.
 0. Look through the list of papers in the references section. Read the titles and find one that i) does //not// have &quot;review&quot; or &quot;meta-analysis in the title,&quot; ii) isn&#39;t too general (e.g. &quot;Treatment in Colorectal Cancer&quot; is definitely a review paper), &#39;&#39;and&#39;&#39; iii) looks interesting. 
@@ -111,7 +125,7 @@ NOTE: this third option takes some practice.
 
 I think I found a good empirical article! Let&#39;s [[START AGAIN]] .
 
-</tw-passagedata><tw-passagedata pid="10" name="abstract" tags="" position="525,1600" size="100,100">So far, so good!
+</tw-passagedata><tw-passagedata pid="10" name="abstract" tags="" position="500,1550" size="100,100">So far, so good!
 
 Now it&#39;s time to skim the abstract!
 
@@ -122,7 +136,7 @@ Empirical papers involve the collection of data. Does the abstract mention a stu
 [[Yes-&gt;structure]] 
 |=
 [[No-&gt;review]] 
-|==|</tw-passagedata><tw-passagedata pid="11" name="structure" tags="" position="525,1725" size="100,100">Yay! This is sounding promising!
+|==|</tw-passagedata><tw-passagedata pid="11" name="structure" tags="" position="500,1700" size="100,100">Yay! This is sounding promising!
 
 Does the paper have headings that include Abstract / Introduction / Methods / Results / Discussion / References? 
 
@@ -143,19 +157,22 @@ Does it describe more than a literature search?
 [[Yes! They talk about an experiment and collecting data.-&gt;empirical]]
 |=
 [[No. :-( The methods only talk about how they found papers-&gt;review]]
-|==|</tw-passagedata><tw-passagedata pid="13" name="missing methods" tags="" position="650,1875" size="100,100">Congratulations! You may have found a weird one!
+|==|</tw-passagedata><tw-passagedata pid="13" name="missing methods" tags="" position="725,1775" size="100,100">Congratulations! You may have found a weird one!
 
 Some journals save space by publishing the methods in the supplementary materials. At this point, you might want to ask for help from your professor or ULA.
 
 [[Crap. They say it&#39;s a review-&gt;review]]
 
-[[Yay! We found the methods hiding!-&gt;methods]]</tw-passagedata><tw-passagedata pid="14" name="empirical" tags="" position="800,2125" size="100,100">CONGRATULATIONS $playName!!!
+[[Yay! We found the methods hiding!-&gt;methods]]</tw-passagedata><tw-passagedata pid="14" name="empirical" tags="" position="750,2025" size="100,100">CONGRATULATIONS $playName!!!
 
 It sounds like you have found an empirical paper on $disease!!
 
 
 &lt;span id=&quot;nameData&quot; style=&quot;display:none&quot;&gt;$playerName&lt;/span&gt;
 &lt;span id=&quot;diseaseData&quot; style=&quot;display:none&quot;&gt;$disease&lt;/span&gt;
+&lt;span id=&quot;topicData&quot; style=&quot;display:none&quot;&gt;$topic&lt;/span&gt;
+&lt;span id=&quot;searchData&quot; style=&quot;display:none&quot;&gt;$searchTerms&lt;/span&gt;
+&lt;span id=&quot;searchDOI&quot; style=&quot;display:none&quot;&gt;$doi&lt;/span&gt;
 
 &lt;button onclick=&quot;
   var n = document.getElementById(&#39;nameData&#39;).textContent;
@@ -163,7 +180,7 @@ It sounds like you have found an empirical paper on $disease!!
   fetch(&#39;https://script.google.com/macros/s/AKfycbyQac9iVc-M2R8IHjEByqyqpbQ93S-ghnHvAfIziDDdrOvRVcMDDh2uQatv_j8ZDLbm/exec&#39;, {
     method: &#39;POST&#39;,
     headers: {&#39;Content-Type&#39;: &#39;text/plain;charset=utf-8&#39;},
-    body: JSON.stringify({name: n, disease: d})
+    body: JSON.stringify({name: n, disease: d, topic: t, searchTerms: s, searchDOI: o})
   });
 &quot;&gt;Submit&lt;/button&gt;
 
@@ -176,7 +193,7 @@ BUT, don&#39;t stop here. [[Keep going-&gt;START AGAIN]] until you&#39;ve found 
 If you have at least two empirical papers, you can move on to the Pick a Perfect Paper Tool. 
 
 NOTE: You&#39;re more likely to find a good paper you will enjoy reading if you start with three or more empirical papers.
-</tw-passagedata><tw-passagedata pid="15" name="START AGAIN" tags="" position="800,1075" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this new article in a scientific journal? 
+</tw-passagedata><tw-passagedata pid="15" name="START AGAIN" tags="" position="950,1000" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this new article in a scientific journal? 
 
 =|
 [[Yes]] 
@@ -186,14 +203,21 @@ NOTE: You&#39;re more likely to find a good paper you will enjoy reading if you 
 
 [[I&#39;m not sure]]]</tw-passagedata><tw-passagedata pid="16" name="Welcome" tags="" position="575,25" size="200,200">&#39;&#39;Welcome to Part 1 of the Freestyle Assignment.&#39;&#39;
 
-This tool was created to guide you through the process of finding an appropriate, useful empirical paper for this assignment. Answer these as best you can, until you find your chosen article. Seek help from neighbors or the teaching team when you need it.
+This tool was created to guide you through the process of finding an appropriate, useful empirical paper for the Freestyle assignment. 
 
-What is your name? 
+You want to end up with a scientific paper that
 
-(input-box: bind $playerName)
+* Is in a scientific journal,
+* Has gone through the peer-review process,
+* Is about treatment or prevention of your class&#39;s disease,
+* Looks interesting to you,
+* Is not too technical, and
+* Has figures and results you can understand.
 
+Go through this adventure tool by answering the questions as best you can. Seek help from neighbors or the teaching team when you need it. 
 
-[[Continue-&gt;Disease]]
+[[Yes! Let&#39;s go!-&gt;name]]
+
 
 </tw-passagedata><tw-passagedata pid="17" name="Disease" tags="" position="650,250" size="100,100">What disease is your class studying?
 
@@ -202,26 +226,74 @@ What is your name?
 (link: &quot;Colorectal Cancer&quot;)[(set: $disease to &#39;Colorectal Cancer&#39;)(goto:&#39;well met&#39;)]
 
 
-</tw-passagedata><tw-passagedata pid="18" name="well met" tags="" position="650,375" size="100,100">Well met $playerName of Colorectal Cancer.
+</tw-passagedata><tw-passagedata pid="18" name="well met" tags="" position="650,375" size="100,100">Well met $playerName of $disease.
 
-[[Let&#39;s venture forth]]</tw-passagedata><tw-passagedata pid="19" name="Let&#39;s venture forth" tags="" position="650,500" size="100,100">To start our hunt, you need to be dressed in the MSU Cloak of Access. 
+Do you plan to study 
+(link: &quot;prevention&quot;)[(set: $topic to &#39;prevention&#39;)(goto:&#39;search terms&#39;)]
+or
+(link: &quot;treatment&quot;)[(set: $topic to &#39;treatment&#39;)(goto:&#39;search terms&#39;)]?
+
+
+</tw-passagedata><tw-passagedata pid="19" name="Let&#39;s venture forth" tags="" position="625,625" size="100,100">To continue our hunt for the perfect paper, you need to be dressed in the MSU Cloak of Access. 
 
 Most scientific papers are published by profit-making publishers and guarded by paywalls. To gain access to them, you need to pay a toll or be associated with an institutuion that pays the toll for you. 
 
 The MSU Cloak of Access will grant you the ability to go through paywalls and access most scientific papers for free.
 
-&lt;img src=&quot;https://i.pinimg.com/736x/88/e1/86/88e186c906b3c0c45a77b8c3c2cf99d9.jpg&quot; alt=&quot;Magical green cloak&quot;&gt;
+&lt;img src=&quot;https://i.pinimg.com/736x/88/e1/86/88e186c906b3c0c45a77b8c3c2cf99d9.jpg&quot; alt=&quot;Magical green cloak&quot; style=&quot;max-width: 100%; width:300px;&quot;&gt;
+
 
 To don the cloak, (link: &quot;log in to the MSU library.&quot;)[(open-url: &#39;https://catalog.lib.msu.edu/MyResearch/Home&#39;)]
 
 Only then will you be prepared to use the (link:&quot;scrying database of PubMed.&quot;)[(open-url:&quot;https://pubmed.ncbi.nlm.nih.gov/&quot;)]
 
-Before you use PubMed, are you interested in
+Once you have donned the cloak, opened PubMed, and entered your search terms, 
 
-[[prevention]] or [[treatment]]
-of $disease.
+[[add your filters to the potion.]]</tw-passagedata><tw-passagedata pid="20" name="Thank You" tags="" position="800,2250" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="name" tags="" position="500,250" size="100,100">What is your name? 
 
-[[empirical]] </tw-passagedata><tw-passagedata pid="20" name="prevention" tags="" position="775,625" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="treatment" tags="" position="525,625" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="Untitled Passage" tags="" position="900,675" size="100,100">Once you have opened PubMed and entered your search terms, proceed to [[understanding filters]].</tw-passagedata><tw-passagedata pid="23" name="understanding filters" tags="" position="900,800" size="100,100"></tw-passagedata><tw-passagedata pid="24" name="Thank You" tags="" position="800,2250" size="100,100"></tw-passagedata></tw-storydata>
+First and Last, letters only please.
+
+(input-box: bind $playerName)
+
+
+[[Continue-&gt;Disease]]
+</tw-passagedata><tw-passagedata pid="22" name="choose topic" tags="" position="650,500" size="100,100">Excellent choice. 
+
+A good literature search is like a good potion. You need all the right ingredients.
+
+0. Good, specific search terms.
+0. The right database or search engine.
+0. Useful filters.
+
+Let&#39;s start with the search terms. 
+
+First, make sure you know the main $topic s for $disease.  If you don&#39;t know them, look back through your class Reading Guides or search for them on a reputable medical site like the (link: &quot;Mayo Clinic&quot;)[(open-url:&quot;https://mayoclinic.org/&quot;)], (link: &quot;Cleavland Clinic&quot;)[(open-url: &quot;https://my.clevelandclinic.org/&quot;)], or (link: &quot;World Health Organization&quot;)[(open-url: &quot;https://www.who.int/&quot;)].
+
+You want to start with a topic you find interesting and then find something specific to search for. &quot;Treatments for headache&quot; will turn up way too many papers to sift through. &quot;NSAIDs for headache clinical trial&quot; narrows things down enough to make your search more manageable. 
+
+So find some specific $topic s you&#39;re interested in.
+
+What search terms do you plan to use?
+(input-box: bind $searchTerms)
+
+With these ingredients in our bag, 
+[[Let&#39;s venture forth]]. </tw-passagedata><tw-passagedata pid="23" name="add your filters to the potion." tags="" position="650,750" size="100,100">Filters in PubMed will help you get the output you want. There are a couple super helpful filters you should use here. 
+
+First, be sure to select the within 5 or 10 years button.
+
+Second, you&#39;ll narrow considerably your search if you select &quot;Clinical Trial&quot; and/or &quot;Randomized Control Trial&quot; under article type.
+
+&lt;style&gt; img {
+     max-width:100%;
+     max-height:100%;
+}
+&lt;/style&gt;
+&lt;img src=&quot;images/filters.png&quot;&gt;
+&lt;/div&gt;
+
+Now, you should have a list of empirical papers that are recent. Start looking through this list for a paper that you think will work for your Freestyle assignment. WARNING: do not simply take the first three papers. Read the titles for something that looks interesting to you and seems accessible.
+
+When you find a promising paper, be sure to [[check it]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
