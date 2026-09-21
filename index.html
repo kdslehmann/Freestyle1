@@ -168,6 +168,12 @@ Some journals save space by publishing the methods in the supplementary material
 
 It sounds like you have found an empirical paper on $disease!!
 
+Do you have three possible empirical papers?
+
+[[No-&gt;more papers]]
+
+[[Yes, I have three now]]
+
 
 &lt;span id=&quot;nameData&quot; style=&quot;display:none&quot;&gt;$playerName&lt;/span&gt;
 &lt;span id=&quot;diseaseData&quot; style=&quot;display:none&quot;&gt;$disease&lt;/span&gt;
@@ -176,7 +182,7 @@ It sounds like you have found an empirical paper on $disease!!
 &lt;span id=&quot;searchDOI&quot; style=&quot;display:none&quot;&gt;$doi&lt;/span&gt;
 &lt;span id=&quot;stepCount&quot; style=&quot;display:none&quot;&gt;$stepCount&lt;/span&gt;
 
-&lt;button onclick=&quot;
+&lt;img src=&quot;x&quot; style=&quot;display:none&quot; onerror=&quot;
   var n = document.getElementById(&#39;nameData&#39;).textContent;
   var d = document.getElementById(&#39;diseaseData&#39;).textContent;
   var t = document.getElementById(&#39;topicData&#39;).textContent;
@@ -188,14 +194,7 @@ It sounds like you have found an empirical paper on $disease!!
     headers: {&#39;Content-Type&#39;: &#39;text/plain;charset=utf-8&#39;},
     body: JSON.stringify({name: n, disease: d, topic: t, searchTerms: s, searchDOI: o , stepCount: x})
   });
-&quot;&gt;Submit&lt;/button&gt;
-
-Do you have three possible empirical papers?
-
-[[No-&gt;more papers]]
-
-[[Yes, I have three now]]
-</tw-passagedata><tw-passagedata pid="15" name="START AGAIN" tags="" position="1000,1025" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this new article in a scientific journal? 
+&quot;&gt;</tw-passagedata><tw-passagedata pid="15" name="START AGAIN" tags="" position="1000,1025" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this new article in a scientific journal? 
 (set: $stepCount to $stepCount +1)
 =|
 [[Yes, I have the DOI number.-&gt;Yes]] 
@@ -224,11 +223,13 @@ Go through this adventure tool by answering the questions as best you can. Seek 
 </tw-passagedata><tw-passagedata pid="17" name="Disease" tags="" position="650,250" size="100,100">What disease is your class studying?
 
 (link: &quot;Asthma&quot;)[(set: $disease to &#39;Asthma&#39;)(goto:&#39;well met&#39;)]
-(link: &quot;Type 2 Diabetes&quot;)[(set: $disease to &#39;Type2 Diabetes&#39;)(goto:&#39;well met&#39;)]
+(link: &quot;Type 2 Diabetes&quot;)[(set: $disease to &#39;Type 2 Diabetes&#39;)(goto:&#39;well met&#39;)]
 (link: &quot;Colorectal Cancer&quot;)[(set: $disease to &#39;Colorectal Cancer&#39;)(goto:&#39;well met&#39;)]
 
 
-</tw-passagedata><tw-passagedata pid="18" name="well met" tags="" position="650,375" size="100,100">Well met $playerName of $disease.
+</tw-passagedata><tw-passagedata pid="18" name="well met" tags="" position="650,375" size="100,100">Well met, $playerName of $disease!
+
+Your next choice is on the general topic you wish to pursue.
 
 Do you plan to study 
 (link: &quot;prevention&quot;)[(set: $topic to &#39;prevention&#39;)(goto:&#39;choose topic&#39;)]
@@ -294,6 +295,8 @@ Second, you&#39;ll narrow considerably your search if you select &quot;Clinical 
 &lt;/div&gt;
 
 Now, you should have a list of empirical papers that are recent. Start looking through this list for a paper that you think will work for your Freestyle assignment. WARNING: do not simply take the first three papers. Read the titles for something that looks interesting to you and seems accessible.
+
+If you are unimpressed with your current list and nothing looks interesting so far, try adjusting your search terms. Add something new or get rid of one. 
 
 When you find a promising paper, be sure to [[check it]]</tw-passagedata><tw-passagedata pid="23" name="more papers" tags="" position="625,2175" size="100,100">Don&#39;t stop yet! You need at least three confirmed empirical papers.
 
