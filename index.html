@@ -10,6 +10,7 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Test Your Paper.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Test Your Paper" startnode="16" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="BB99D6AB-7974-4BA5-B011-9F63D02E92CD" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link { color: #acfae7; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="check it" tags="" position="525,875" size="100,100">&#39;&#39;So you think you found an empirical paper for your Freestyle Assignment?&#39;&#39;
+(set: $stepCount to 0)
 
 These pages will take you through a number of questions to determine if this paper is indeed an empirical (original research) paper published in a scientific journal. 
 
@@ -173,6 +174,7 @@ It sounds like you have found an empirical paper on $disease!!
 &lt;span id=&quot;topicData&quot; style=&quot;display:none&quot;&gt;$topic&lt;/span&gt;
 &lt;span id=&quot;searchData&quot; style=&quot;display:none&quot;&gt;$searchTerms&lt;/span&gt;
 &lt;span id=&quot;searchDOI&quot; style=&quot;display:none&quot;&gt;$doi&lt;/span&gt;
+&lt;span id=&quot;stepCount&quot; style=&quot;display:none&quot;&gt;$stepCount&lt;/span&gt;
 
 &lt;button onclick=&quot;
   var n = document.getElementById(&#39;nameData&#39;).textContent;
@@ -180,26 +182,23 @@ It sounds like you have found an empirical paper on $disease!!
   var t = document.getElementById(&#39;topicData&#39;).textContent;
   var s = document.getElementById(&#39;searchData&#39;).textContent;
   var o = document.getElementById(&#39;searchDOI&#39;).textContent;
+  var x = document.getElementById(&#39;stepCount&#39;).textContent;
   fetch(&#39;https://script.google.com/macros/s/AKfycbyPgvbC60Q47FvvQNeKd1g2akO7R-gXoP1qolmSfSpNtH8aoP_TX-J4gHCIsvuxMxfZ/exec&#39;, {
     method: &#39;POST&#39;,
     headers: {&#39;Content-Type&#39;: &#39;text/plain;charset=utf-8&#39;},
-    body: JSON.stringify({name: n, disease: d, topic: t, searchTerms: s, searchDOI: o})
+    body: JSON.stringify({name: n, disease: d, topic: t, searchTerms: s, searchDOI: o , stepCount: x})
   });
 &quot;&gt;Submit&lt;/button&gt;
 
+Do you have three possible empirical papers?
 
+[[No-&gt;more papers]]
 
-[[Continue-&gt;Thank You]]
-
-BUT, don&#39;t stop here. [[Keep going-&gt;START AGAIN]] until you&#39;ve found at least two. 
-
-If you have at least two empirical papers, you can move on to the Pick a Perfect Paper Tool. 
-
-NOTE: You&#39;re more likely to find a good paper you will enjoy reading if you start with three or more empirical papers.
-</tw-passagedata><tw-passagedata pid="15" name="START AGAIN" tags="" position="950,1000" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this new article in a scientific journal? 
-
+[[Yes, I have three now]]
+</tw-passagedata><tw-passagedata pid="15" name="START AGAIN" tags="" position="1000,1025" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Is this new article in a scientific journal? 
+(set: $stepCount to $stepCount +1)
 =|
-[[Yes]] 
+[[Yes, I have the DOI number.-&gt;Yes]] 
 |=
 [[No]] 
 |==|
@@ -252,7 +251,7 @@ Only then will you be prepared to use the (link:&quot;scrying database of PubMed
 
 Once you have donned the cloak, opened PubMed, and entered your search terms, 
 
-[[add your filters to the potion.]]</tw-passagedata><tw-passagedata pid="20" name="Thank You" tags="" position="800,2250" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="name" tags="" position="500,250" size="100,100">What is your name? 
+[[add your filters to the potion.]]</tw-passagedata><tw-passagedata pid="20" name="name" tags="" position="500,250" size="100,100">What is your name? 
 
 First and Last, letters only please.
 
@@ -260,7 +259,7 @@ First and Last, letters only please.
 
 
 [[Continue-&gt;Disease]]
-</tw-passagedata><tw-passagedata pid="22" name="choose topic" tags="" position="650,500" size="100,100">Excellent choice. 
+</tw-passagedata><tw-passagedata pid="21" name="choose topic" tags="" position="650,500" size="100,100">Excellent choice. 
 
 A good literature search is like a good potion. You need all the right ingredients.
 
@@ -280,7 +279,7 @@ What search terms do you plan to use?
 (input-box: bind $searchTerms)
 
 With these ingredients in our bag, 
-[[Let&#39;s venture forth]]. </tw-passagedata><tw-passagedata pid="23" name="add your filters to the potion." tags="" position="650,750" size="100,100">Filters in PubMed will help you get the output you want. There are a couple super helpful filters you should use here. 
+[[Let&#39;s venture forth]]. </tw-passagedata><tw-passagedata pid="22" name="add your filters to the potion." tags="" position="650,750" size="100,100">Filters in PubMed will help you get the output you want. There are a couple super helpful filters you should use here. 
 
 First, be sure to select the within 5 or 10 years button.
 
@@ -296,7 +295,13 @@ Second, you&#39;ll narrow considerably your search if you select &quot;Clinical 
 
 Now, you should have a list of empirical papers that are recent. Start looking through this list for a paper that you think will work for your Freestyle assignment. WARNING: do not simply take the first three papers. Read the titles for something that looks interesting to you and seems accessible.
 
-When you find a promising paper, be sure to [[check it]]</tw-passagedata></tw-storydata>
+When you find a promising paper, be sure to [[check it]]</tw-passagedata><tw-passagedata pid="23" name="more papers" tags="" position="625,2175" size="100,100">Don&#39;t stop yet! You need at least three confirmed empirical papers.
+
+Select your next promising paper and
+
+[[check it]].</tw-passagedata><tw-passagedata pid="24" name="Yes, I have three now" tags="" position="900,2175" size="100,100">Congratulations! Now that you have three empirical papers that have been peer-reviewed, you can move on the Pick the Best Paper Tool. This tool will help you decide which of these three papers is the best one for the Freestyle assignment.
+
+Pick the Best Paper Tool.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
